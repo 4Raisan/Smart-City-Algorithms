@@ -22,8 +22,8 @@ The application demonstrates practical implementation of data structures and alg
 ## 👥 Group Members
 
 * CIT-24-02-0052 – Imesh Kaushalya – Graph Implementation & Route Management
-* CIT-24-02-0233 – HASITHA LAKSHAN – Sorting Algorithms & Performance Comparison
-* CIT-24-02-0051 – Rashen Anupama – Searching Algorithms, Tree Structure & System Integration
+* CIT-24-02-0051 – Rashen Anupama – Sorting Algorithms & Performance Comparison
+* CIT-24-02-0233 – Hasitha Lakshan – Searching Algorithms, Tree Structure & System Integration
 
 ---
 
