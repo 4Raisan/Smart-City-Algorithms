@@ -8,5 +8,6 @@ public class Main {
         int[] a = {5, 2, 9, 1, 3};
         long bubbleTime = BubbleSort.bubbleSort(a);
         System.out.println(Arrays.toString(a) + " -> " + bubbleTime);
+
     }
 }
