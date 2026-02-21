@@ -25,5 +25,15 @@ public class MergeSort {
 
     private static void merge(int[] arr, int[] left, int[] right) {
 
+        int l = 0, r = 0, s = 0;  // s for mark the final sorted position
+
+        // compare and merge until all sides ended
+        while (l < left.length && r < right.length) {
+            if (left[l] <= right[r])
+                arr[s++] = left[l++];
+            else
+                arr[s++] = right[r++];
+        }
+
     }
 }
