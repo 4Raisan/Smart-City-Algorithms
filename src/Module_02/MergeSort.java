@@ -16,6 +16,11 @@ public class MergeSort {
         for (int i = mid; i < arr.length; i++)
             right[i - mid] = arr[i];
 
+        // recursion
+        devide(left);  // devided until get single elements
+        devide(right);
+
+        merge(arr, left, right);  // returned elements sending to sort
     }
 
     private static void merge(int[] arr, int[] left, int[] right) {
