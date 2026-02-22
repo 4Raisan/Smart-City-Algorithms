@@ -35,5 +35,10 @@ public class MergeSort {
                 arr[s++] = right[r++];
         }
 
+        // add remaining elements
+        while (l < left.length)
+            arr[s++] = left[l++];
+        while (r < right.length)
+            arr[s++] = right[r++];
     }
 }
