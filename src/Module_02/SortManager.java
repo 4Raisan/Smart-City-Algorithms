@@ -26,6 +26,28 @@ public class SortManager {
         }
 
         System.out.println("\nSort on: " + Arrays.toString(array));
+        runSorts(array);
+    }
+
+    private static void runSorts(int[] original) {
+
+        // Bubble Sort
+        int[] bArr = original.clone();
+        long bStart = System.nanoTime();
+        BubbleSort.bubbleSort(bArr);
+        long bTime = System.nanoTime() - bStart;
+
+        // Merge Sort
+        int[] mArr = original.clone();
+        long mStart = System.nanoTime();
+        MergeSort.mergeSort(mArr);
+        long mTime = System.nanoTime() - mStart;
+
+        // Quick Sort
+        int[] qArr = original.clone();
+        long qStart = System.nanoTime();
+        //QuickSort.sort(qArr);
+        long qTime = System.nanoTime() - qStart;
 
     }
 }
