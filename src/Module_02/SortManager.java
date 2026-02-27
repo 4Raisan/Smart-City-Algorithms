@@ -49,5 +49,11 @@ public class SortManager {
         //QuickSort.sort(qArr);
         long qTime = System.nanoTime() - qStart;
 
+        System.out.println("\n1. Bubble Sorted: " + Arrays.toString(bArr));
+        System.out.println("   Execution time: " + bTime + " ns");
+        System.out.println("\n2. Merge Sorted: " + Arrays.toString(mArr));
+        System.out.println("   Execution time: " + mTime + " ns");
+        System.out.println("\n3. Quick Sorted: " + Arrays.toString(qArr));
+        System.out.println("   Execution time: " + qTime + " ns");
     }
 }
