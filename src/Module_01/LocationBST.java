@@ -38,8 +38,8 @@ public class LocationBST {
     private void inorder(TreeNode root){
         if (root == null){
             inorderRec(root.left);
-
-
+            System.out.print(root.name );
+            inorder(root.right);
         }
     }
 
