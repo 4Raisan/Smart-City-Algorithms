@@ -1,4 +1,6 @@
 package src.Module_01;
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.*;
 
 public class Graph {
@@ -19,8 +21,55 @@ public class Graph {
         }
     }
 
-    public void addEdge(String from, String to) {
+    public void addRoad(String loc1, String loc2) {
+
+        if (!adjList.containsKey(loc1) || !adjList.containsKey(loc2)) {
+            System.out.println("Location not found");
+            return;
+        }
+        adjList.get(loc1).add(loc2);
+        adjList.get(loc2).add(loc1);
     }
 
+    public void removeRoad(String loc1, String loc2) {
+        if (adjList.containsKey(loc1))
+            adjList.get(loc1).add(loc2);
 
+        if (adjList.containsKey(loc2))
+            adjList.get(loc2).add(loc1);
+    }
+
+    public void displayConnections(){
+
+        for (String location : adjList.keySet()){
+            System.out.println(location + "->" + adjList.get(location));
+        }
+    }
+
+    //BFS Traversal using queues
+    public void bfs(String start){
+        System.out.println("Location not found");
+        return;
+    }
+
+    Set<String> visited = new HashSet<>();
+    Queue<String> queue = new LinkedList<>();
+
+    visited.add(start);
+    queue.add(start);
+
+    System.out.println("BFS Traversal");
+
+    while (!queue.isEmpty()){
+        String current = queue.poll();
+        System.out.println(current + " ");
+
+        for (String neighbor : adjList.get(current)){
+            if (!visited.contains(neighbor)){
+                visited.add(neighbor);
+                queue.add(neighbor);
+            }
+        }
+    }
+    System.out.println();
 }
