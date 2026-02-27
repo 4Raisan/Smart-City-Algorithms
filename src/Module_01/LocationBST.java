@@ -36,14 +36,10 @@ public class LocationBST {
         inorder(root);
     }
     private void inorder(TreeNode root){
-        if (root == null){
-            inorderRec(root.left);
+        if (root != null){
+            inorder(root.left);
             System.out.print(root.name );
             inorder(root.right);
         }
     }
-
-
-
-
 }
