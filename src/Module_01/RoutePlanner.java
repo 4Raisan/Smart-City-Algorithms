@@ -21,21 +21,21 @@ public class RoutePlanner {
         int choice;
 
         do {
-            System.out.println("\n==== SMART CITY ROUTE PLANNER ====");
-            System.out.println("1. Add Location");
-            System.out.println("2. Remove Location");
-            System.out.println("3. Add Road");
-            System.out.println("4. Remove Road");
-            System.out.println("5. Display Connections");
-            System.out.println("6. BFS Traversal");
-            System.out.println("7. Exit");
+            System.out.println("\n      SMART CITY ROUTE PLANNER      ");
+            System.out.println("1. Add Location: ");
+            System.out.println("2. Remove Location: ");
+            System.out.println("3. Add Road: ");
+            System.out.println("4. Remove Road: ");
+            System.out.println("5. Display Connections: ");
+            System.out.println("6. BFS Traversal: ");
+            System.out.println("7. Exit: ");
             System.out.print("Enter choice: ");
 
             while (!sc.hasNextInt()) {
                 System.out.println("Invalid input. Enter number.");
                 sc.next();
             }
-
+            //read users choice
             choice = sc.nextInt();
             sc.nextLine();
 

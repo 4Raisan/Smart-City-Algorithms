@@ -41,14 +41,13 @@ public class Graph {
 
         if (adjList.containsKey(loc1)) {
             adjList.get(loc1).remove(loc2);
-        }
 
         if (adjList.containsKey(loc2)) {
             adjList.get(loc2).remove(loc1);
         }
     }
 
-    // Display connections
+    //display connections
     public void displayConnections() {
 
         for (String location : adjList.keySet()) {
@@ -56,7 +55,7 @@ public class Graph {
         }
     }
 
-    //BFS Traversal using Queue
+    //BFS traversal using Queue
     public void bfs(String start) {
 
         if (!adjList.containsKey(start)) {
