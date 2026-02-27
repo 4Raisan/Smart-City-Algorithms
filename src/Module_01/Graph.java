@@ -1,4 +1,4 @@
-package Module_01;
+package src.Module_01;
 
 public class Graph {
 }
