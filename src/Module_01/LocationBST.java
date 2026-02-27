@@ -11,6 +11,7 @@ public class LocationBST {
             this.name = name;
             left = right = null;
         }
+
     }
 
     private  TreeNode root;
