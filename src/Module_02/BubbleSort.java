@@ -16,7 +16,6 @@ public class BubbleSort {
             }
             if (!swap) {break;}
         }
-        long bsTime = System.nanoTime() - startTime;
-        return bsTime;
+        return System.nanoTime() - startTime;   // currentTime -
     }
 }
