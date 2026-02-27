@@ -1,4 +1,4 @@
-package Module_01;
+package src.Module_01;
 
 import src.Module_01.Graph;
 import src.Module_01.LocationBST;
