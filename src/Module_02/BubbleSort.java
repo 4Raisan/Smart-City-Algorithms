@@ -2,8 +2,8 @@ package Module_02;
 
 public class BubbleSort {
 
-    public static long bubbleSort(int[] arr) {
-        long startTime = System.nanoTime();   // get current time
+    public static int[] bubbleSort(int[] arr) {
+
         boolean swap = false;  //  detect to finish sorting
 
         for (int i=0; i<arr.length-1; i++) {    // outer loops
@@ -17,6 +17,6 @@ public class BubbleSort {
             }
             if (!swap) {break;}
         }
-        return System.nanoTime() - startTime;   // calculate and return time
+        return arr;
     }
 }
