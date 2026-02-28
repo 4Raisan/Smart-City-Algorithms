@@ -25,26 +25,26 @@ public class SortManager {
                 array[i] = sc.nextInt();
         }
 
-        System.out.println("\nSort on: " + Arrays.toString(array));
+        System.out.println("\nSort on: " + Arrays.toString(array) + "\nSize of the random dataset: 10");
         runSorts(array);
     }
 
-    private static void runSorts(int[] original) {
+    private static void runSorts(int[] array) {
 
-        // Bubble Sort
-        int[] bArr = original.clone();
+        // Bubble sort
+        int[] bArr = array.clone();
         long bStart = System.nanoTime();
         BubbleSort.bubbleSort(bArr);
         long bTime = System.nanoTime() - bStart;
 
-        // Merge Sort
-        int[] mArr = original.clone();
+        // Merge sort
+        int[] mArr = array.clone();
         long mStart = System.nanoTime();
         MergeSort.mergeSort(mArr);
         long mTime = System.nanoTime() - mStart;
 
-        // Quick Sort
-        int[] qArr = original.clone();
+        // Quick sort
+        int[] qArr = array.clone();
         long qStart = System.nanoTime();
         //QuickSort.sort(qArr);
         long qTime = System.nanoTime() - qStart;
@@ -55,5 +55,13 @@ public class SortManager {
         System.out.println("   Execution time: " + mTime + " ns");
         System.out.println("\n3. Quick Sorted: " + Arrays.toString(qArr));
         System.out.println("   Execution time: " + qTime + " ns");
+
+        System.out.println("\n-----------------------------------");
+        System.out.printf("%-11s | %-10s\n", "Algorithm", "Time (ns)");
+        System.out.println("-----------------------------------");
+        System.out.printf("%-11s | %-10d\n", "Bubble Sort", bTime);
+        System.out.printf("%-11s | %-10d\n", "Merge Sort", mTime);
+        System.out.printf("%-11s | %-10d\n", "Quick Sort", qTime);
+        System.out.println("-----------------------------------");
     }
 }
