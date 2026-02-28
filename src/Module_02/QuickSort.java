@@ -8,19 +8,22 @@ public class QuickSort {
 
     private static void Sort(int[] arr, int low, int high) {
 
-        if (low < high) {
-            int pivotIndex = partition(arr, low, high);
+        // recursively divide and sort subarrays
+        if (low < high) {   // stop recursion
+            int pivotIndex = qSort(arr, low, high);
             Sort(arr, low, pivotIndex - 1);
             Sort(arr, pivotIndex + 1, high);
         }
     }
 
-    private static int partition(int[] arr, int low, int high) {
+    private static int qSort(int[] arr, int start, int end) {
 
-        int pivot = arr[high];
-        int i = low - 1;
+        // choose pivot and place it correctly
+        int pivot = arr[end];
+        int i = start - 1;
 
-        for (int j = low; j < high; j++) {
+        // smaller elements move to left
+        for (int j = start; j < end; j++) {
             if (arr[j] <= pivot) {
                 i++;
                 int temp = arr[i];
@@ -28,9 +31,10 @@ public class QuickSort {
                 arr[j] = temp;
             }
         }
+        // move pivot to middle
         int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
+        arr[i + 1] = arr[end];
+        arr[end] = temp;
         return i + 1;
     }
 }
