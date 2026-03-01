@@ -21,8 +21,13 @@ public class  Main {
             System.out.println("===================================");
             System.out.println("Enter your choice: ");
 
+            //inputs (p01)
+            while (!sc.hasNextInt()) {
+                System.out.println("Invalid choice.");
+                sc.next();
+            }
 
-
+            choice = sc.nextInt();
         }
 
         //
