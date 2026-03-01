@@ -3,7 +3,7 @@ package Module_02;
 public class QuickSort {
 
     public static void quicksort(int[] arr) {
-        Sort(arr, 0, arr.length - 1);
+        Sort(arr, 0, arr.length-1);
     }
 
     private static void Sort(int[] arr, int low, int high) {

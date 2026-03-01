@@ -17,8 +17,8 @@ public class MergeSort {
             right[i - mid] = arr[i];
 
         // recursion
-        left = mergeSort(left);  // divided until get single elements
-        right = mergeSort(right);
+        mergeSort(left);  // divided until get single elements
+        mergeSort(right);
 
         merge(arr, left, right);  // returned elements sending to sort
 
