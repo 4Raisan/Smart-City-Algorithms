@@ -1,8 +1,5 @@
 package src.Module_01;
 
-import src.Module_01.Graph;
-import src.Module_01.LocationBST;
-
 import java.util.Scanner;
 
 public class RoutePlanner {
@@ -44,16 +41,17 @@ public class RoutePlanner {
                 case 1:
                     System.out.print("Enter location: ");
                     String loc = sc.nextLine();
-                    tree.insert(loc);
-                    graph.addLocation(loc);
+                    tree.insert(loc);           //add to bst
+                    graph.addLocation(loc);     //add to graph
                     System.out.println("Location added.");
                     break;
 
                 case 2:
                     System.out.print("Enter location: ");
                     String rloc = sc.nextLine();
+                    tree.delete(rloc);
                     graph.removeLocation(rloc);
-                    System.out.println("Location removed.");
+                    System.out.println("Location removed. ");
                     break;
 
                 case 3:
