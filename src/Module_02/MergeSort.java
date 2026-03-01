@@ -8,7 +8,7 @@ public class MergeSort {
 
         int mid = arr.length / 2;  // find mid
 
-        // devided left & right as smaller parts
+        // divided left & right as smaller parts
         int[] left = new int[mid];
         int[] right = new int[arr.length - mid];
         for (int i = 0; i < mid; i++)
@@ -17,8 +17,8 @@ public class MergeSort {
             right[i - mid] = arr[i];
 
         // recursion
-        left = mergeSort(left);  // devided until get single elements
-        right = mergeSort(right);
+        mergeSort(left);  // divided until get single elements
+        mergeSort(right);
 
         merge(arr, left, right);  // returned elements sending to sort
 
