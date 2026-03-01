@@ -2,9 +2,9 @@ package Module_02;
 
 public class MergeSort {
 
-    public static void devide(int[] arr) {
+    public static int[] mergeSort(int[] arr) {
 
-        if (arr.length <= 1) { return; }    // return one element
+        if (arr.length <= 1) { return arr; }    // return one element
 
         int mid = arr.length / 2;  // find mid
 
@@ -17,10 +17,12 @@ public class MergeSort {
             right[i - mid] = arr[i];
 
         // recursion
-        devide(left);  // devided until get single elements
-        devide(right);
+        left = mergeSort(left);  // devided until get single elements
+        right = mergeSort(right);
 
         merge(arr, left, right);  // returned elements sending to sort
+
+        return arr;
     }
 
     private static void merge(int[] arr, int[] left, int[] right) {
@@ -35,5 +37,10 @@ public class MergeSort {
                 arr[s++] = right[r++];
         }
 
+        // add remaining elements
+        while (l < left.length)
+            arr[s++] = left[l++];
+        while (r < right.length)
+            arr[s++] = right[r++];
     }
 }
