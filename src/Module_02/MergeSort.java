@@ -4,8 +4,7 @@ public class MergeSort {
 
     public static int[] mergeSort(int[] arr) {
 
-        if (arr.length <= 1) { return arr; }    // return one element
-
+        if (arr.length <= 1) { return arr; }    // stop recursion at one element
         int mid = arr.length / 2;  // find mid
 
         // divided left & right as smaller parts
