@@ -43,8 +43,8 @@ public class  Main {
                     break;
 
                 case 3:
-                    //person 3 add your code there
-                    //podiyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    PerformanceAnalyzer.start();
+                    break;
 
 
                 case 4:
