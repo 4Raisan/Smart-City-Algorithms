@@ -4,12 +4,14 @@ import java.util.*;
 public class SortManager {
     public static void begin() {
 
+        // Random or User menu driven
         Scanner sc = new Scanner(System.in);
         System.out.println("1 - Random Dataset");
         System.out.println("2 - Manual Input");
         System.out.print("Choose option: ");
         int choice = sc.nextInt();
 
+        // Random generate and Manual dataset input
         int[] array;
         if (choice == 1) {
             array = new int[10];
@@ -25,7 +27,9 @@ public class SortManager {
                 array[i] = sc.nextInt();
         }
 
+        // Display input/random dataset
         System.out.println("\nSort on: " + Arrays.toString(array) + "\nSize of the random dataset: 10");
+        // Perform sorting
         runSorts(array);
     }
 
@@ -49,6 +53,7 @@ public class SortManager {
         Module_02.QuickSort.quicksort(qArr);
         long qTime = System.nanoTime() - qStart;
 
+        // Display sorted outputs and execution time for each
         System.out.println("\n1. Bubble Sorted: " + Arrays.toString(bArr));
         System.out.println("   Execution time: " + bTime + " ns");
         System.out.println("\n2. Merge Sorted: " + Arrays.toString(mArr));
@@ -56,6 +61,7 @@ public class SortManager {
         System.out.println("\n3. Quick Sorted: " + Arrays.toString(qArr));
         System.out.println("   Execution time: " + qTime + " ns");
 
+        // Display comparison table
         System.out.println("\n-----------------------------------");
         System.out.printf("%-11s | %-10s\n", "Algorithm", "Time (ns)");
         System.out.println("-----------------------------------");
