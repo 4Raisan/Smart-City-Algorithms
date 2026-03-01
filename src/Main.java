@@ -43,6 +43,8 @@ public class  Main {
 
                 case 3:
                     //person 3 add your code there
+                    //podiyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 
                 case 4:
                     System.out.println("Good Bye!");            //Everyone
