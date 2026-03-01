@@ -2,14 +2,14 @@ package Module_03;
 
 public class BinarySearchTree {
 
-    // Node class
-    static class Node {
+    // Node class - private fixes "exposed outside visibility scope" warning
+    private static class Node {
         int value;
         Node left, right;
         Node(int value) { this.value = value; }
     }
 
-    Node root;
+    private Node root;
 
     // Insert a value
     public void insert(int value) {
@@ -35,11 +35,18 @@ public class BinarySearchTree {
         return searchRec(node.right, value);
     }
 
-    // Print in-order (sorted order)
-    public void inOrder(Node node) {
+    // Private inOrder helper
+    private void inOrder(Node node) {
         if (node == null) return;
         inOrder(node.left);
         System.out.print(node.value + " ");
         inOrder(node.right);
+    }
+
+    // Public method - call this from outside to print the tree
+    public void printAll() {
+        System.out.print("BST values: ");
+        inOrder(root);
+        System.out.println();
     }
 }

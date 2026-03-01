@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class PerformanceAnalyzer {
 
-    public static void runModule() {
+    public static void unModule_03() {
         Scanner sc = new Scanner(System.in);
         int choice = -1;
 
@@ -34,14 +34,17 @@ public class PerformanceAnalyzer {
             int target = arr[size - 1]; // worst case target
 
             long t1 = System.nanoTime();
-            SearchingAlgorithms.linearSearch(arr, target);
+            @SuppressWarnings("unused")
+            int linearResult = SearchingAlgorithms.linearSearch(arr, target);
             long linearTime = System.nanoTime() - t1;
 
             long t2 = System.nanoTime();
-            SearchingAlgorithms.binarySearch(arr, target);
-            long binaryTime = System.nanoTime() - t2;
+            @SuppressWarnings("unused")
+            int binaryResult = SearchingAlgorithms.binarySearch(arr, target);
+              long binaryTime = System.nanoTime() - t2;
 
-            System.out.printf("%-10d | %-18d | %d%n", size, linearTime, binaryTime);
+            // just to use the variables and remove warnings
+            System.out.println("  (Linear found at: " + linearResult + ", Binary found at: " + binaryResult + ")");
         }
     }
 
