@@ -34,19 +34,19 @@ public class SortManager {
         // Bubble sort
         int[] bArr = array.clone();
         long bStart = System.nanoTime();
-        BubbleSort.bubbleSort(bArr);
+        Module_02.BubbleSort.bubbleSort(bArr);
         long bTime = System.nanoTime() - bStart;
 
         // Merge sort
         int[] mArr = array.clone();
         long mStart = System.nanoTime();
-        MergeSort.mergeSort(mArr);
+        Module_02.MergeSort.mergeSort(mArr);
         long mTime = System.nanoTime() - mStart;
 
         // Quick sort
         int[] qArr = array.clone();
         long qStart = System.nanoTime();
-        //QuickSort.sort(qArr);
+        Module_02.QuickSort.quicksort(qArr);
         long qTime = System.nanoTime() - qStart;
 
         System.out.println("\n1. Bubble Sorted: " + Arrays.toString(bArr));
