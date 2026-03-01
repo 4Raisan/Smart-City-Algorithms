@@ -1,8 +1,8 @@
-package src.Module_01;
+package Module_01;
 
 public class LocationBST {
 
-    class TreeNode {
+    static class TreeNode {
         String name;
         TreeNode left;
         TreeNode right;
