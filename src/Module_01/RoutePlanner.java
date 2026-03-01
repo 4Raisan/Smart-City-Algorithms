@@ -10,12 +10,11 @@ public class RoutePlanner {
     private static LocationBST tree;
     private static Graph graph;
 
-    public RoutePlanner() {
-        tree = new LocationBST();
-        graph = new Graph();
     }
 
     public static void start() {
+        LocationBST tree = new LocationBST();
+        Graph graph = new Graph();
 
         Scanner sc = new Scanner(System.in);
         int choice;
