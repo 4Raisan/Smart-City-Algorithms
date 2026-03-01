@@ -1,5 +1,7 @@
 import java.util.Random;
 
+import java.util.Random;
+
 public class PerformanceAnalyzer {
 
     public static int[] generateArray(int size) {
@@ -51,4 +53,5 @@ public class PerformanceAnalyzer {
 
         System.out.println("==============================================================");
     }
+}
 }
