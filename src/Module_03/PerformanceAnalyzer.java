@@ -88,4 +88,7 @@ public class PerformanceAnalyzer {
         Arrays.sort(arr);
         return arr;
     }
+
+    public static void start() {
+    }
 }
