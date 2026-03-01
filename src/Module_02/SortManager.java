@@ -46,7 +46,7 @@ public class SortManager {
         // Quick sort
         int[] qArr = array.clone();
         long qStart = System.nanoTime();
-        QuickSort.sort(qArr);
+        Module_02.QuickSort.quicksort(qArr);
         long qTime = System.nanoTime() - qStart;
 
         System.out.println("\n1. Bubble Sorted: " + Arrays.toString(bArr));

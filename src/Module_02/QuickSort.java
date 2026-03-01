@@ -2,16 +2,16 @@ package Module_02;
 
 public class QuickSort {
 
-    public static void sort(int[] arr) {
-        quickSort(arr, 0, arr.length - 1);
+    public static void quicksort(int[] arr) {
+        Sort(arr, 0, arr.length - 1);
     }
 
-    private static void quickSort(int[] arr, int low, int high) {
+    private static void Sort(int[] arr, int low, int high) {
 
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
-            quickSort(arr, low, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, high);
+            Sort(arr, low, pivotIndex - 1);
+            Sort(arr, pivotIndex + 1, high);
         }
     }
 

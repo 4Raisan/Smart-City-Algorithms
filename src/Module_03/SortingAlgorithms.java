@@ -1,4 +1,4 @@
-package src.Module_03;
+package Module_03;
 
 public class SortingAlgorithms {
 
