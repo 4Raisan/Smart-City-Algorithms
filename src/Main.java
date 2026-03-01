@@ -1,12 +1,11 @@
-import Module_02.*;
-import java.util.*;
-
+import Module_02.SortManager;
 
 public class Main {
+
     public static void main(String[] args) {
-        // RANDOM
-        int[] a = {5, 2, 9, 1, 3};
-        long bubbleTime = BubbleSort.bubbleSort(a);
-        System.out.println(Arrays.toString(a) + " -> " + bubbleTime);
+
+        // Module 2
+        SortManager.begin();
+
     }
 }
