@@ -42,7 +42,7 @@ public class RoutePlanner {                    //
 
                 case 1:
                     System.out.print("Enter location: ");
-                    String loc = sc.nextLine();
+                    String loc = sc.nextLine().trim();
                     tree.insert(loc);
                     graph.addLocation(loc);
                     System.out.println("Location added.");
@@ -50,7 +50,7 @@ public class RoutePlanner {                    //
 
                 case 2:
                     System.out.print("Enter location: ");
-                    String rloc = sc.nextLine();
+                    String rloc = sc.nextLine().trim();
                     tree.delete(rloc);
                     graph.removeLocation(rloc);
                     System.out.println("Location removed.");
@@ -58,17 +58,17 @@ public class RoutePlanner {                    //
 
                 case 3:
                     System.out.print("Enter first location: ");
-                    String l1 = sc.nextLine();
+                    String l1 = sc.nextLine().trim();
                     System.out.print("Enter second location: ");
-                    String l2 = sc.nextLine();
+                    String l2 = sc.nextLine().trim();
                     graph.addRoad(l1, l2);
                     break;
 
                 case 4:
                     System.out.print("Enter first location: ");
-                    String rl1 = sc.nextLine();
+                    String rl1 = sc.nextLine().trim();
                     System.out.print("Enter second location: ");
-                    String rl2 = sc.nextLine();
+                    String rl2 = sc.nextLine().trim();
                     graph.removeRoad(rl1, rl2);
                     break;
 
@@ -81,7 +81,7 @@ public class RoutePlanner {                    //
 
                 case 6:
                     System.out.print("Enter starting location: ");
-                    String start = sc.nextLine();
+                    String start = sc.nextLine().trim();
                     graph.bfs(start);
                     break;
 

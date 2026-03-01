@@ -34,6 +34,8 @@ public class Graph {
 
         adjList.get(loc1).add(loc2);
         adjList.get(loc2).add(loc1);
+        System.out.println("Road added between " + loc1 + " and " + loc2);
+
     }
 
     // Remove road
