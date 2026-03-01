@@ -12,7 +12,7 @@ public class RoutePlanner {
         graph = new Graph();
     }
 
-    public void start() {
+    public static void start() {
 
         Scanner sc = new Scanner(System.in);
         int choice;

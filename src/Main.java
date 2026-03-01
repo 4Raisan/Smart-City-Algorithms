@@ -2,6 +2,7 @@ import Module_01.*;
 import Module_02.SortManager;
 import Module_03.PerformanceAnalyzer;
 import java.util.Scanner;
+import java.util.SortedMap;
 
 
 public class  Main {
@@ -29,45 +30,30 @@ public class  Main {
             }
 
             choice = sc.nextInt();
-        }
 
-        //
-        // so
-        // System
-        //
-        //
-        //
-        //
-        // Module 2
-        // ...
+            //cases
+            switch (choice) {
+                case 1:
+                    src.Module_01.RoutePlanner.start();     //person 1
+                    break;
 
-        //---------------------------------------------------
+                case 2:
+                    SortManager.begin();        //Person 2
+                    break;
 
-        // Module 2
-        SortManager.begin();
+                case 3:
+                    //person 3 add your code there
 
-        //---------------------------------------------------
+                case 4:
+                    System.out.println("Good Bye!");            //Everyone
+                    break;
 
-        // Module 03
-        // ...
-        Scanner sc = new Scanner(System.in);
-        int choice = -1;
+                default:
+                    System.out.println("Invalid choice.");         //everyone
 
-        System.out.println("=== Smart City Algorithms ===");
+            }
+        } while (choice != 4);
+        sc.close();
 
-        while (choice != 0) {
-            System.out.println("\n--- Main Menu ---");
-            System.out.println("1. Module 1 - Route Planner");
-            System.out.println("2. Module 2 - Data Sorter");
-            System.out.println("3. Module 3 - Performance Analyzer");
-            System.out.println("0. Exit");
-            System.out.print("Enter choice: ");
-            choice = sc.nextInt();
-
-            if (choice == 1) System.out.println("Module 1 - coming soon");
-            else if (choice == 2) System.out.println("Module 2 - coming soon");
-            else if (choice == 3) PerformanceAnalyzer.runModule();
-            else if (choice != 0) System.out.println("Invalid choice!");
-        }
     }
 }
