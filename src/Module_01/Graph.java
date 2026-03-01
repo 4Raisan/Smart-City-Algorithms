@@ -1,10 +1,10 @@
-package src.Module_01;
+package Module_01;
 
 import java.util.*;
 
 public class Graph {
 
-    private Map<String, List<String>> adjList;
+    private final Map<String, List<String>> adjList;
 
     public Graph() {
         adjList = new HashMap<>();
