@@ -74,7 +74,7 @@ The application demonstrates practical implementation of data structures and alg
 
 1. Clone this repository
 2. Open the project in any Java IDE (IntelliJ / Eclipse / VS Code)
-3. Compile and run `Main.java`
+3. Compile and run `Smart-City-Algorithms/src/Main.java`
 
 ---
 
@@ -91,12 +91,25 @@ The application demonstrates practical implementation of data structures and alg
 ## 📁 Repository Structure
 
 ```
-Main.java
-Graph.java
-AVLTree.java / BST.java
-BubbleSort.java
-MergeSort.java
-QuickSort.java
-Search.java
-PerformanceAnalyzer.java
+Smart-City-Algorithms/
+│
+├── src/
+    ├── Main.java
+    │
+    ├── Module_01/
+    │   ├── Graph.java
+    │   ├── LocationBST.java
+    │   └── RoutePlanner.java
+    │
+    ├── Module_02/
+    │   ├── BubbleSort.java
+    │   ├── MergeSort.java
+    │   ├── QuickSort.java
+    │   └── SortManager.java
+    │
+    └── Module_03/
+        ├── BinarySearchTree.java
+        ├── SearchingAlgorithms.java
+        ├── SortingAlgorithms.java
+        └── PerformanceAnalyzer.java
 ```
