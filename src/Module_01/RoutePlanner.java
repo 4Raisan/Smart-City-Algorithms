@@ -7,13 +7,8 @@ import java.util.Scanner;
 
 public class RoutePlanner {
 
-    private static LocationBST tree;
-    private static Graph graph;
-
-    public RoutePlanner() {
-        tree = new LocationBST();
-        graph = new Graph();
-    }
+    private static LocationBST tree = new LocationBST();
+    private static Graph graph = new Graph();
 
     public static void start() {
 
