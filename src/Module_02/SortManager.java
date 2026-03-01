@@ -6,7 +6,7 @@ public class SortManager {
 
         // Random or User menu driven
         Scanner sc = new Scanner(System.in);
-        System.out.println("1 - Random Dataset");
+        System.out.println("\n1 - Random Dataset");
         System.out.println("2 - Manual Input");
         System.out.print("Choose option: ");
         int choice = sc.nextInt();
