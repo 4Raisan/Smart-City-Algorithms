@@ -1,6 +1,7 @@
 import Module_02.SortManager;
 import Module_03.PerformanceAnalyzer;
 import java.util.Scanner;
+import Module_03.BinarySearchTree;
 
 public class Main {
 
@@ -17,25 +18,24 @@ public class Main {
         //---------------------------------------------------
 
         // Module 03
-        // ...
+        // ...//
         Scanner sc = new Scanner(System.in);
-        int choice = -1;
+        boolean running = true;
 
-        System.out.println("=== Smart City Algorithms ===");
+        System.out.println("=========================================");
+        System.out.println("     SMART CITY ALGORITHMS SYSTEM        ");
+        System.out.println("=========================================");
 
-        while (choice != 0) {
-            System.out.println("\n--- Main Menu ---");
-            System.out.println("1. Module 1 - Route Planner");
-            System.out.println("2. Module 2 - Data Sorter");
-            System.out.println("3. Module 3 - Performance Analyzer");
+        while (running) {
+            System.out.println("\n============= MAIN MENU =================");
+            System.out.println("1. Smart City Route Planner  (Module 1)");
+            System.out.println("2. Data Sorter               (Module 2)");
+            System.out.println("3. Performance Analyzer      (Module 3)");
             System.out.println("0. Exit");
             System.out.print("Enter choice: ");
-            choice = sc.nextInt();
 
-            if (choice == 1) System.out.println("Module 1 - coming soon");
-            else if (choice == 2) System.out.println("Module 2 - coming soon");
-            else if (choice == 3) PerformanceAnalyzer.runModule();
-            else if (choice != 0) System.out.println("Invalid choice!");
+            int choice = sc.nextInt();
+
         }
     }
 }
