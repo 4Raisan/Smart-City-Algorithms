@@ -19,22 +19,7 @@ public class Main {
 
         // Module 03
         // ...//
-        Scanner sc = new Scanner(System.in);
-        boolean running = true;
 
-        System.out.println("=========================================");
-        System.out.println("     SMART CITY ALGORITHMS SYSTEM        ");
-        System.out.println("=========================================");
-
-        while (running) {
-            System.out.println("\n============= MAIN MENU =================");
-            System.out.println("1. Smart City Route Planner  (Module 1)");
-            System.out.println("2. Data Sorter               (Module 2)");
-            System.out.println("3. Performance Analyzer      (Module 3)");
-            System.out.println("0. Exit");
-            System.out.print("Enter choice: ");
-
-            int choice = sc.nextInt();
 
         }
     }
