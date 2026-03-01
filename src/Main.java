@@ -1,8 +1,9 @@
 import Module_01.*;
 import Module_02.SortManager;
 import Module_03.PerformanceAnalyzer;
+
 import java.util.Scanner;
-import Module_03.BinarySearchTree;
+import java.util.SortedMap;
 
 
 public class  Main {
@@ -30,29 +31,32 @@ public class  Main {
             }
 
             choice = sc.nextInt();
-        }
 
-        //
-        // so
-        // System
-        //
-        //
-        //
-        //
-        // Module 2
-        // ...
+            //cases
+            switch (choice) {
+                case 1:
+                    Module_01.RoutePlanner.start();     //person 1
+                    break;
 
-        //---------------------------------------------------
+                case 2:
+                    SortManager.begin();        //Person 2
+                    break;
 
-        // Module 2
-        SortManager.begin();
+                case 3:
+                    //person 3 add your code there
+                    //podiyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-        //---------------------------------------------------
 
-        // Module 03
-        // ...//
-        //
+                case 4:
+                    System.out.println("Good Bye!");            //Everyone
+                    break;
 
-        }
+                default:
+                    System.out.println("Invalid choice.");         //everyone
+
+            }
+        } while (choice != 4);
+        sc.close();
+
     }
 }
