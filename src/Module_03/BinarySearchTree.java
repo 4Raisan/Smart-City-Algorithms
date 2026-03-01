@@ -1,125 +1,45 @@
-package src.Module_03;
-
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
-import java.util.Scanner;
+package Module_03;
 
 public class BinarySearchTree {
 
-    class node{
-        int data;
-        node left, right;
-
-        node(int value) {
-            data = value;
-            left = right = null;
-        }
+    // Node class
+    static class Node {
+        int value;
+        Node left, right;
+        Node(int value) { this.value = value; }
     }
 
-    node root;
-    public int index = 0;
+    Node root;
 
+    // Insert a value
     public void insert(int value) {
         root = insertRec(root, value);
     }
 
-    public node insertRec(node root, int value) {
-        if(root == null) {
-            return new node(value);
-        }
-
-        if ( value < root.data) {
-            root.left = insertRec(root.left,value);
-        } else if (value > root.data) {
-            root.right = insertRec(root.right,value);
-        }
-
-        return root;
-
+    private Node insertRec(Node node, int value) {
+        if (node == null) return new Node(value);
+        if (value < node.value) node.left = insertRec(node.left, value);
+        else if (value > node.value) node.right = insertRec(node.right, value);
+        return node;
     }
 
-    public void inorder() {
-        inorderRec(root);
-        System.out.println();
+    // Search for a value
+    public boolean search(int value) {
+        return searchRec(root, value);
     }
 
-    public void inorderRec(node root) {
-        if(root != null) {
-            inorderRec(root.left);
-            System.out.println(root.data+"");
-            inorderRec(root.right);
-        }
+    private boolean searchRec(Node node, int value) {
+        if (node == null) return false;
+        if (node.value == value) return true;
+        if (value < node.value) return searchRec(node.left, value);
+        return searchRec(node.right, value);
     }
 
-    public void storeinArray(int[] arr){
-        index = 0;
-        storeinorder(root,arr);
+    // Print in-order (sorted order)
+    public void inOrder(Node node) {
+        if (node == null) return;
+        inOrder(node.left);
+        System.out.print(node.value + " ");
+        inOrder(node.right);
     }
-
-    public void storeinorder(node root, int[] arr) {
-        if(root != null) {
-            storeinorder(root.left,arr);
-            arr[index++] = root.data;
-            storeinorder(root.right,arr);
-        }
-    }
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        BinarySearchTree tree = new BinarySearchTree();
-
-        System.out.println("Enter Number Of Elements : ");
-        int n = sc.nextInt();
-
-        int[] arr = new int[n];
-
-        for(int i=0; i< n; i++) {
-            System.out.println("Enter value"+(i+1)+":");
-            int value = sc.nextInt();
-            tree.insert(value);
-        }
-
-        System.out.println("Inorder travesel:");
-        tree.inorder();
-
-        int [] sortedarray = new int[n];
-        tree.storeinArray(sortedarray);
-
-        System.out.println("Values Soretd Array:");
-        for (int num : sortedarray) {
-            System.out.println(num+"");
-        }
-
-        System.out.println();
-        sc.close();
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
