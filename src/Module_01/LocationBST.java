@@ -33,7 +33,7 @@ public class LocationBST {
         return root;
     }
 
-    public void delte(String name){
+    public void delete(String name){
         root = deleteRec(root, name);
     }
 
