@@ -8,9 +8,6 @@ public class  Main {
 
     public static void main(String[] args) {
 
-        LocationBST tree = new LocationBST();
-        Graph graph = new Graph();
-
         Scanner sc = new Scanner(System.in);
         int choice;
 
