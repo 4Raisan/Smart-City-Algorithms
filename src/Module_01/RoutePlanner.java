@@ -1,11 +1,14 @@
-package src.Module_01;
+package Module_01;
+
+import Module_01.Graph;
+import Module_01.LocationBST;
 
 import java.util.Scanner;
 
 public class RoutePlanner {
 
-    private LocationBST tree;
-    private Graph graph;
+    private static LocationBST tree;
+    private static Graph graph;
 
     public RoutePlanner() {
         tree = new LocationBST();
