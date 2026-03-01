@@ -19,10 +19,8 @@ public class  Main {
             System.out.println("2. Data Sorter");
             System.out.println("3. Performance Analyzer");
             System.out.println("4. Exit");
-            System.out.println("====================================");
+            System.out.println("===================================");
             System.out.println("Enter your choice: ");
-
-
 
 
 
