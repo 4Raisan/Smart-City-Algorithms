@@ -42,17 +42,19 @@ public class RoutePlanner {
                 case 1:
                     System.out.print("Enter location: ");
                     String loc = sc.nextLine();
-                    tree.insert(loc);           //add to bst
-                    graph.addLocation(loc);     //add to graph
-                    System.out.println("Location added.");
+                    if (graph.addLocation(loc)) {     //add to graph
+                        tree.insert(loc);           //add to bst
+                        System.out.println("Location added.");
+                    }
                     break;
 
                 case 2:
                     System.out.print("Enter location: ");
                     String rloc = sc.nextLine();
-                    tree.delete(rloc);
-                    graph.removeLocation(rloc);
-                    System.out.println("Location removed. ");
+                    if (graph.removeLocation(rloc)) {
+                        tree.delete(rloc);
+                        System.out.println("Location removed. ");
+                    }
                     break;
 
                 case 3:
@@ -60,8 +62,8 @@ public class RoutePlanner {
                     String l1 = sc.nextLine();
                     System.out.print("Enter second location: ");
                     String l2 = sc.nextLine();
-                    graph.addRoad(l1, l2);
-                    System.out.println("Road added.");
+                    if (graph.addRoad(l1, l2))
+                        System.out.println("Road added.");
                     break;
 
                 case 4:
@@ -69,8 +71,8 @@ public class RoutePlanner {
                     String rl1 = sc.nextLine();
                     System.out.print("Enter second location: ");
                     String rl2 = sc.nextLine();
-                    graph.removeRoad(rl1, rl2);
-                    System.out.println("Road removed.");
+                    if (graph.removeRoad(rl1, rl2))
+                        System.out.println("Road removed.");
                     break;
 
                 case 5:
