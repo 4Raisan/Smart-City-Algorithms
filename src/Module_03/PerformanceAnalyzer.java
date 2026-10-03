@@ -19,10 +19,17 @@ public class PerformanceAnalyzer {
             System.out.println("2. Sort Algorithm Analysis");
             System.out.println("0. Back");
             System.out.print("Enter choice: ");
+            while (!sc.hasNextInt()) {
+                if (!sc.hasNext()) return;
+                System.out.println("Invalid input. Enter number.");
+                sc.next();
+            }
             choice = sc.nextInt();
+            if (sc.hasNextLine()) sc.nextLine();
 
             if (choice == 1) searchAnalysis();
             else if (choice == 2) sortAnalysis();
+            else if (choice != 0) System.out.println("Invalid choice.");
         }
     }
 
