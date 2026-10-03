@@ -8,7 +8,7 @@ public class QuickSort {
 
     private static void Sort(int[] arr, int low, int high) {
 
-        // recursively divide and sort subarrays
+        // choose pivot, recursively divide and sort subarrays
         if (low < high) {   // stop recursion
             int pivotIndex = qSort(arr, low, high);
             Sort(arr, low, pivotIndex - 1);

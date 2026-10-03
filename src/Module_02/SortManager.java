@@ -47,7 +47,7 @@ public class SortManager {
 
         // Display input/random dataset
         if (sc.hasNextLine()) sc.nextLine();
-        System.out.println("\nSort on: " + Arrays.toString(array) + "\nSize of the random dataset: 10");
+        System.out.println("\nSort on: " + Arrays.toString(array) + "\nDataset size: " + array.length);
         // Perform sorting
         runSorts(array);
     }
