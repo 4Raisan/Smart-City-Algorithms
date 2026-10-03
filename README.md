@@ -43,8 +43,8 @@ The application demonstrates practical implementation of data structures and alg
 * Add and remove locations
 * Add and remove roads (edges)
 * Display connections between locations
-* Tree structure (AVL / BST) for location storage
-* Stack or Queue for traversal operations
+* Binary Search Tree (BST) for location storage
+* Breadth-first search (BFS) using a queue
 * Input validation and menu-driven system
 
 ---
@@ -62,7 +62,7 @@ The application demonstrates practical implementation of data structures and alg
 
 ### 🔹 Module 3 – Algorithm Performance Analyzer
 
-* Searching algorithm (Linear Search or Binary Search)
+* Linear Search and Binary Search
 * Sorting algorithm analysis
 * Performance testing on different input sizes (100, 500, 1000 elements)
 * Execution time measurement
@@ -74,7 +74,7 @@ The application demonstrates practical implementation of data structures and alg
 
 1. Clone this repository
 2. Open the project in any Java IDE (IntelliJ / Eclipse / VS Code)
-3. Compile and run `Smart-City-Algorithms/src/Main.java`
+3. Select a JDK and run `src/Main.java`
 
 ---
 
@@ -113,3 +113,24 @@ Smart-City-Algorithms/
         ├── SortingAlgorithms.java
         └── PerformanceAnalyzer.java
 ```
+
+## Requirements and Command-Line Setup
+
+Use **JDK 8 or newer**, with `java` and `javac` available in your terminal.
+No external libraries are required. The source was compiled with Java 8 compatibility using JDK 24.
+
+From the repository root, compile and run:
+
+```sh
+javac -d out src/Main.java src/Module_01/*.java src/Module_02/*.java src/Module_03/*.java
+java -cp out Main
+```
+
+If PowerShell does not expand the source wildcards, use:
+
+```powershell
+$sources = Get-ChildItem src -Recurse -Filter *.java | ForEach-Object FullName
+javac -d out $sources
+java -cp out Main
+```
+
