@@ -30,18 +30,20 @@ public class RoutePlanner {
             System.out.print("Enter choice: ");
 
             while (!sc.hasNextInt()) {
+                if (!sc.hasNext()) return;
                 System.out.println("Invalid input. Enter number.");
                 sc.next();
             }
             //read users choice
             choice = sc.nextInt();
-            sc.nextLine();
+            if (sc.hasNextLine()) sc.nextLine();
 
             switch (choice) {
 
                 case 1:
                     System.out.print("Enter location: ");
-                    String loc = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String loc = sc.nextLine().trim();
                     if (graph.addLocation(loc)) {     //add to graph
                         tree.insert(loc);           //add to bst
                         System.out.println("Location added.");
@@ -50,7 +52,8 @@ public class RoutePlanner {
 
                 case 2:
                     System.out.print("Enter location: ");
-                    String rloc = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String rloc = sc.nextLine().trim();
                     if (graph.removeLocation(rloc)) {
                         tree.delete(rloc);
                         System.out.println("Location removed. ");
@@ -59,18 +62,22 @@ public class RoutePlanner {
 
                 case 3:
                     System.out.print("Enter first location: ");
-                    String l1 = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String l1 = sc.nextLine().trim();
                     System.out.print("Enter second location: ");
-                    String l2 = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String l2 = sc.nextLine().trim();
                     if (graph.addRoad(l1, l2))
                         System.out.println("Road added.");
                     break;
 
                 case 4:
                     System.out.print("Enter first location: ");
-                    String rl1 = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String rl1 = sc.nextLine().trim();
                     System.out.print("Enter second location: ");
-                    String rl2 = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String rl2 = sc.nextLine().trim();
                     if (graph.removeRoad(rl1, rl2))
                         System.out.println("Road removed.");
                     break;
@@ -81,9 +88,14 @@ public class RoutePlanner {
 
                 case 6:
                     System.out.print("Enter starting location: ");
-                    String start = sc.nextLine();
+                    if (!sc.hasNextLine()) return;
+                    String start = sc.nextLine().trim();
                     graph.bfs(start);
                     break;
+                case 7:
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
             }
 
         } while (choice != 7);
