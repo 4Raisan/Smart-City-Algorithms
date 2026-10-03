@@ -11,8 +11,11 @@ public class RoutePlanner {
     private static Graph graph = new Graph();
 
     public static void start() {
+        start(new Scanner(System.in));
+    }
 
-        Scanner sc = new Scanner(System.in);
+    public static void start(Scanner sc) {
+
         int choice;
 
         do {

@@ -7,7 +7,10 @@ import java.util.Scanner;
 public class PerformanceAnalyzer {
 
     public static void unModule_03() {
-        Scanner sc = new Scanner(System.in);
+        start(new Scanner(System.in));
+    }
+
+    public static void start(Scanner sc) {
         int choice = -1;
 
         while (choice != 0) {
@@ -90,5 +93,6 @@ public class PerformanceAnalyzer {
     }
 
     public static void start() {
+        start(new Scanner(System.in));
     }
 }

@@ -3,7 +3,6 @@ import Module_02.SortManager;
 import Module_03.PerformanceAnalyzer;
 
 import java.util.Scanner;
-import java.util.SortedMap;
 
 
 public class  Main {
@@ -26,24 +25,26 @@ public class  Main {
 
             //inputs (p01)
             while (!sc.hasNextInt()) {
+                if (!sc.hasNext()) { sc.close(); return; }
                 System.out.println("Invalid choice.");
                 sc.next();
             }
 
             choice = sc.nextInt();
+            if (sc.hasNextLine()) sc.nextLine();
 
             //cases
             switch (choice) {
                 case 1:
-                    Module_01.RoutePlanner.start();     //person 1
+                    Module_01.RoutePlanner.start(sc);     //person 1
                     break;
 
                 case 2:
-                    SortManager.begin();        //Person 2
+                    SortManager.begin(sc);        //Person 2
                     break;
 
                 case 3:
-                    PerformanceAnalyzer.start();
+                    PerformanceAnalyzer.start(sc);
                     break;
 
 

@@ -3,9 +3,12 @@ import java.util.*;
 
 public class SortManager {
     public static void begin() {
+        begin(new Scanner(System.in));
+    }
+
+    public static void begin(Scanner sc) {
 
         // Random or User menu driven
-        Scanner sc = new Scanner(System.in);
         System.out.println("\n1 - Random Dataset");
         System.out.println("2 - Manual Input");
         System.out.print("Choose option: ");
