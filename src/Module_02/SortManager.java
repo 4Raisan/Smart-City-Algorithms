@@ -12,7 +12,13 @@ public class SortManager {
         System.out.println("\n1 - Random Dataset");
         System.out.println("2 - Manual Input");
         System.out.print("Choose option: ");
-        int choice = sc.nextInt();
+        Integer choice = readNumber(sc);
+        if (choice == null) { return; }
+        while (choice != 1 && choice != 2) {
+            System.out.print("Invalid choice. Enter 1 or 2: ");
+            choice = readNumber(sc);
+            if (choice == null) { return; }
+        }
 
         // Random generate and Manual dataset input
         int[] array;
@@ -23,17 +29,37 @@ public class SortManager {
                 array[i] = rand.nextInt(100);
         } else {
             System.out.print("Enter dataset size: ");
-            int size = sc.nextInt();
+            Integer size = readNumber(sc);
+            if (size == null) { return; }
+            while (size < 1 || size > 1000) {
+                System.out.print("Enter dataset size between 1 and 1000: ");
+                size = readNumber(sc);
+                if (size == null) { return; }
+            }
             array = new int[size];
             System.out.println("Enter elements: ");
-            for (int i = 0; i < size; i++)
-                array[i] = sc.nextInt();
+            for (int i = 0; i < size; i++) {
+                Integer value = readNumber(sc);
+                if (value == null) { return; }
+                array[i] = value;
+            }
         }
 
         // Display input/random dataset
+        if (sc.hasNextLine()) sc.nextLine();
         System.out.println("\nSort on: " + Arrays.toString(array) + "\nSize of the random dataset: 10");
         // Perform sorting
         runSorts(array);
+    }
+
+    // Read integers and retry invalid input
+    private static Integer readNumber(Scanner sc) {
+        while (!sc.hasNextInt()) {
+            if (!sc.hasNext()) { return null; }
+            System.out.print("Invalid input. Enter an integer: ");
+            sc.next();
+        }
+        return sc.nextInt();
     }
 
     private static void runSorts(int[] array) {
