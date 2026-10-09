@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">Smart City Algorithms module architecture</title><desc id="desc">Main.java passes a shared Scanner to three independent menus: RoutePlanner, SortManager and PerformanceAnalyzer. All data is held in memory; no server or database is involved.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#94a3b8"/></marker>
+<symbol id="graph" viewBox="0 0 40 40"><path d="M10 10L30 12L20 31ZM10 10L20 31"/><circle cx="10" cy="10" r="4"/><circle cx="30" cy="12" r="4"/><circle cx="20" cy="31" r="4"/></symbol>
+<symbol id="sort" viewBox="0 0 40 40"><path d="M7 9h10M7 20h16M7 31h22M31 6v20m-5-5 5 5 5-5"/></symbol>
+<symbol id="chart" viewBox="0 0 40 40"><path d="M5 5v30h31M12 28V19m9 9V12m9 16V6"/></symbol></defs>
+<rect width="960" height="420" rx="22" fill="#0b1220"/>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+<text x="480" y="39" font-size="24" font-weight="700" fill="#f8fafc">Three modules, one console</text>
+<rect x="330" y="65" width="300" height="82" rx="14" fill="#17243a" stroke="#60a5fa"/>
+<text x="480" y="98" font-size="21" font-weight="700" fill="#f8fafc">Main.java</text><text x="480" y="126" font-size="15" fill="#94a3b8">Main menu + shared Scanner</text>
+<g fill="none" stroke="#94a3b8" stroke-width="2"><path d="M480 148V175M175 175H795"/><path d="M175 175V204M480 175V204M795 175V204" marker-end="url(#arrow)"/></g>
+<g fill="#142238" stroke="#334155"><rect x="35" y="210" width="280" height="164" rx="16"/><rect x="340" y="210" width="280" height="164" rx="16"/><rect x="645" y="210" width="300" height="164" rx="16"/></g>
+<g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#graph" x="155" y="225" width="40" height="40" stroke="#60a5fa"/><use href="#sort" x="460" y="225" width="40" height="40" stroke="#34d399"/><use href="#chart" x="775" y="225" width="40" height="40" stroke="#a78bfa"/></g>
+<g font-size="20" font-weight="700" fill="#f8fafc"><text x="175" y="292">Route planner</text><text x="480" y="292">Data sorter</text><text x="795" y="292">Performance analyzer</text></g>
+<g font-size="15" fill="#b8c5da"><text x="175" y="322">Graph + location BST</text><text x="175" y="347">Road management · BFS</text><text x="480" y="322">Bubble · Merge · Quick</text><text x="480" y="347">Arrays + elapsed time</text><text x="795" y="322">Search + sorting comparisons</text><text x="795" y="347">100 / 500 / 1,000 elements</text></g>
+<text x="480" y="402" font-size="14" fill="#94a3b8">Local Java application · In-memory data · No external libraries</text>
+</g></svg>
