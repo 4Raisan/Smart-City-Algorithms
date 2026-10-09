@@ -9,7 +9,7 @@
 <text x="480" y="39" font-size="24" font-weight="700" fill="#f8fafc">Three modules, one console</text>
 <rect x="330" y="65" width="300" height="82" rx="14" fill="#17243a" stroke="#60a5fa"/>
 <text x="480" y="98" font-size="21" font-weight="700" fill="#f8fafc">Main.java</text><text x="480" y="126" font-size="15" fill="#94a3b8">Main menu + shared Scanner</text>
-<g fill="none" stroke="#94a3b8" stroke-width="2"><path d="M480 148V175M175 175H795"/><path d="M175 175V204M480 175V204M795 175V204" marker-end="url(#arrow)"/></g>
+<g fill="none" stroke="#94a3b8" stroke-width="2"><path d="M480 148V175M175 175H795"/><path d="M175 175V204" marker-end="url(#arrow)"/><path d="M480 175V204" marker-end="url(#arrow)"/><path d="M795 175V204" marker-end="url(#arrow)"/></g>
 <g fill="#142238" stroke="#334155"><rect x="35" y="210" width="280" height="164" rx="16"/><rect x="340" y="210" width="280" height="164" rx="16"/><rect x="645" y="210" width="300" height="164" rx="16"/></g>
 <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#graph" x="155" y="225" width="40" height="40" stroke="#60a5fa"/><use href="#sort" x="460" y="225" width="40" height="40" stroke="#34d399"/><use href="#chart" x="775" y="225" width="40" height="40" stroke="#a78bfa"/></g>
 <g font-size="20" font-weight="700" fill="#f8fafc"><text x="175" y="292">Route planner</text><text x="480" y="292">Data sorter</text><text x="795" y="292">Performance analyzer</text></g>
