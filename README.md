@@ -2,6 +2,18 @@
 
 A menu-driven Java console application for **CCS2300 — Data Structures and Algorithms, Assignment 1**. Explore graphs and trees, compare sorting algorithms, and observe search/sort execution times.
 
+## Download
+
+**[Version 1.0.0](https://github.com/4Raisan/Smart-City-Algorithms/releases/tag/v1.0.0)** includes a ready-to-run JAR, the complete source ZIP and SHA256 checksums.
+
+With **Java 8 or newer** installed, download [Smart-City-Algorithms-1.0.0.jar](https://github.com/4Raisan/Smart-City-Algorithms/releases/download/v1.0.0/Smart-City-Algorithms-1.0.0.jar), open a terminal in its folder, and run:
+
+```sh
+java -jar Smart-City-Algorithms-1.0.0.jar
+```
+
+The JAR runs on Windows, Linux and macOS with a compatible Java runtime. It is a console application; launch it from a terminal to see the menus and enter input. Compiling the source requires a JDK, but running the JAR does not require a compiler.
+
 ## Three modules
 
 | Module | What it demonstrates |
